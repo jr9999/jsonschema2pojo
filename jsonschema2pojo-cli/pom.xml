@@ -5,7 +5,7 @@
     <parent>
         <artifactId>jsonschema2pojo</artifactId>
         <groupId>org.jsonschema2pojo</groupId>
-        <version>0.4.6-SNAPSHOT</version>
+        <version>0.4.6.cvent-SNAPSHOT</version>
     </parent>
 
     <artifactId>jsonschema2pojo-cli</artifactId>
@@ -29,9 +29,9 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.5</version>
                 <configuration>
-                    <!-- 
-                        Fixes filtering in files that contain single '@' characters (e.g. .bat files 
-                        containing @echo off) by removing the '@' character as a delimiter   
+                    <!--
+                        Fixes filtering in files that contain single '@' characters (e.g. .bat files
+                        containing @echo off) by removing the '@' character as a delimiter
                     -->
                     <useDefaultDelimiters>false</useDefaultDelimiters>
                     <delimiters>
