@@ -10,7 +10,7 @@
 
     <groupId>org.jsonschema2pojo</groupId>
     <artifactId>jsonschema2pojo</artifactId>
-    <version>0.4.6-SNAPSHOT</version>
+    <version>0.4.6.cvent-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>jsonschema2pojo</name>
@@ -36,10 +36,38 @@
     </developers>
 
     <scm>
-        <url>https://github.com/joelittlejohn/jsonschema2pojo</url>
-        <connection>scm:git:git@github.com:joelittlejohn/jsonschema2pojo.git</connection>
-        <developerConnection>scm:git:git@github.com:joelittlejohn/jsonschema2pojo.git</developerConnection>
+        <connection>scm:git:git@github.com:cvent/jsonschema2pojo.git</connection>
+        <developerConnection>scm:git:git@github.com:cvent/jsonschema2pojo.git</developerConnection>
+        <url>https://github.com/cvent/jsonschema2pojo</url>
+        <tag>HEAD</tag>
     </scm>
+
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>cvent-repo</id>
+            <name>Cvent Snapshots Repo</name>
+            <url>http://hq04hqnug001.cvent.net:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>cvent-repo</id>
+            <name>Cvent Releases Repo</name>
+            <url>http://hq04hqnug001.cvent.net:8081/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
 
     <licenses>
         <license>
@@ -384,25 +412,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>maven-central</id>
-            <url>http://repo1.maven.org/maven2</url>
-        </repository>
-        <repository>
-            <id>gradle</id>
-            <url>http://repo.gradle.org/gradle/libs-releases-local</url>
-            <snapshots>
-              <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>gradle-workaround</id>
-            <url>http://flywaydb.org/repo</url>
-            <snapshots>
-              <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>
