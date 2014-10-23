@@ -4,7 +4,7 @@
 
     <groupId>org.jsonschema2pojo</groupId>
     <artifactId>jsonschema2pojo</artifactId>
-    <version>0.4.9.cvent-SNAPSHOT</version>
+    <version>0.4.9.cvent</version>
 
     <packaging>pom</packaging>
     <name>jsonschema2pojo</name>
@@ -33,7 +33,7 @@
         <connection>scm:git:git@github.com:cvent/jsonschema2pojo.git</connection>
         <developerConnection>scm:git:git@github.com:cvent/jsonschema2pojo.git</developerConnection>
         <url>https://github.com/cvent/jsonschema2pojo</url>
-        <tag>HEAD</tag>
+        <tag>jsonschema2pojo-0.4.9.cvent</tag>
     </scm>
 
     <distributionManagement>
