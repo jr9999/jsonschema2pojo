@@ -36,20 +36,6 @@
         <tag>HEAD</tag>
     </scm>
 
-    <repositories>
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <distributionManagement>
         <snapshotRepository>
             <id>cvent-repo</id>
@@ -93,7 +79,7 @@
                                         <artifactId>maven-license-plugin</artifactId>
                                         <versionRange>[0.0,)</versionRange>
                                         <goals>
-                                             <goal>format</goal>
+                                            <goal>format</goal>
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
@@ -149,6 +135,14 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>                    
             <plugin>
                 <groupId>com.mycila.maven-license-plugin</groupId>
                 <artifactId>maven-license-plugin</artifactId>
@@ -273,7 +267,7 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>2.2.0</version>
             </dependency>
-    		<dependency>
+            <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>${gson.version}</version>
