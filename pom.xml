@@ -40,12 +40,12 @@
         <snapshotRepository>
             <id>cvent-repo</id>
             <name>Cvent Snapshots Repo</name>
-            <url>http://hq04hqnug001.cvent.net:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://nexus-01.cvent.net:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>cvent-repo</id>
             <name>Cvent Releases Repo</name>
-            <url>http://hq04hqnug001.cvent.net:8081/nexus/content/repositories/releases/</url>
+            <url>http://nexus-01.cvent.net:8081/nexus/content/repositories/releases/</url>
         </repository>
     </distributionManagement>
 
@@ -142,7 +142,7 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
-            </plugin>                    
+            </plugin>
             <plugin>
                 <groupId>com.mycila.maven-license-plugin</groupId>
                 <artifactId>maven-license-plugin</artifactId>
